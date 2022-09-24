@@ -8,4 +8,3 @@ function reverseWords(str) {
     
     return arr.join(" ");
 }
- console.log(reverseWords("artur strr sad"))

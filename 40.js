@@ -1,11 +1,12 @@
-class SmallestIntegerFinder {
-    findSmallestInt(args) {
-      let answer = args[0];
-      for(let i = 0; i < args.length;i++) {
-        if(args[i] < answer) {
-          answer = args[i]
-        }
-      }
-      return answer
+function countSheeps(arrayOfSheep) {
+    let answer = 0;
+    for(let i = 0; i < arrayOfSheep.length; i++) {
+      if(arrayOfSheep[i] == false || arrayOfSheep[i] == null || arrayOfSheep[i] == undefined) {
+        answer +=0;
+      } else {
+        answer +=1;
+      } 
     }
+    return answer;
   }
+  

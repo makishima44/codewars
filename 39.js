@@ -7,3 +7,5 @@ function squareSum(numbers){
   }
 
   console.log(squareSum([1,2]));
+
+

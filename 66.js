@@ -1,11 +1,13 @@
 function numberToPower(number, power){
-    let str = number;
-    if(power === 0) {
-        return 1;
-    }
-    for(let i = 1; i < power; i++) {
-        str *= number
+    let str = 1;
+    for(let i = 0; i < power; i++) {
+        str = str * number;
     }
     return str;
 }
+
+console.log(numberToPower(10,4))
+
+
+
 

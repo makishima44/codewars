@@ -10,3 +10,5 @@ function printerError(s) {
     }
     return countBad + "/" + s.length;
 }
+
+

@@ -6,7 +6,7 @@ function NameMe(first, last) {
 }
 
 //-----------------------------------------------------------------------------------------------------------//
-//Money, Money, Money
+// Money, Money, Money
 function calculateYears(principal, interest, tax, desired) {
   let moneyForYear = principal;
   let years = 0;
@@ -20,3 +20,20 @@ function calculateYears(principal, interest, tax, desired) {
 }
 
 //-----------------------------------------------------------------------------------------------------------//
+// Sum of odd numbers
+function rowSumOddNumbers(n) {
+  let currentOdd = 1;
+  let sum = 0;
+
+  for (let row = 1; row <= n; row++) {
+    sum = 0;
+
+    for (let i = 0; i < row; i++) {
+      if (row === n) {
+        sum += currentOdd;
+      }
+      currentOdd += 2;
+    }
+  }
+  return sum;
+}

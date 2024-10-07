@@ -37,3 +37,13 @@ function rowSumOddNumbers(n) {
   }
   return sum;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//Find the middle element
+
+function gimme(triplet) {
+  const min = Math.min(...triplet);
+  const max = Math.max(...triplet);
+  return triplet.findIndex((el) => el !== min && el !== max);
+}
+

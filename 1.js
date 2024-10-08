@@ -39,7 +39,7 @@ function rowSumOddNumbers(n) {
 }
 
 //-----------------------------------------------------------------------------------------------------------//
-//Find the middle element
+// Find the middle element
 
 function gimme(triplet) {
   const min = Math.min(...triplet);
@@ -47,3 +47,12 @@ function gimme(triplet) {
   return triplet.findIndex((el) => el !== min && el !== max);
 }
 
+//-----------------------------------------------------------------------------------------------------------//
+// Breaking chocolate problem
+function breakChocolate(n, m) {
+  if (n <= 0 || m <= 0) {
+    return 0;
+  } else {
+    return n * m - 1;
+  }
+}

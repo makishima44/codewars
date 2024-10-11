@@ -58,7 +58,7 @@ function breakChocolate(n, m) {
 }
 
 //-----------------------------------------------------------------------------------------------------------//
-//Make a function that does arithmetic!
+// Make a function that does arithmetic!
 function arithmetic(a, b, operator) {
   switch (operator) {
     case "add":
@@ -70,4 +70,12 @@ function arithmetic(a, b, operator) {
     case "divide":
       return a / b;
   }
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// Remove anchor from URL
+
+function removeUrlAnchor(url) {
+  let del = "#";
+  return url.split(del)[0];
 }

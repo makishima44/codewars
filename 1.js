@@ -79,3 +79,14 @@ function removeUrlAnchor(url) {
   let del = "#";
   return url.split(del)[0];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Round up to the next multiple of 5
+
+function roundToNext5(n) {
+  let result = n;
+  for (let i = n; result % 5 !== 0; i++) {
+    result++;
+  }
+  return result;
+}

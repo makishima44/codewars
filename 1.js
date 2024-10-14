@@ -90,3 +90,13 @@ function roundToNext5(n) {
   }
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Simple Fun #176: Reverse Letter
+
+function reverseLetter(str) {
+  let filteredStr = str.replace(/[^a-zA-Z]/g, "");
+  return filteredStr.split("").reverse().join("");
+}
+
+console.log(reverseLetter("ultr53o?n"));

@@ -99,4 +99,15 @@ function reverseLetter(str) {
   return filteredStr.split("").reverse().join("");
 }
 
-console.log(reverseLetter("ultr53o?n"));
+//-----------------------------------------------------------------------------------------------------------//
+// Find the capitals
+
+var capitals = function (word) {
+  let resultArr = [];
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === word[i].toUpperCase()) {
+      resultArr.push(i);
+    }
+  }
+  return resultArr;
+};

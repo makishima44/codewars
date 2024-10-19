@@ -129,3 +129,11 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
     [attacker, defender] = [defender, attacker];
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Small enough? - Beginner
+
+function smallEnough(a, limit) {
+  maxNumber = Math.max(...a);
+  return maxNumber > limit ? false : true;
+}

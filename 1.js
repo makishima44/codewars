@@ -111,3 +111,21 @@ var capitals = function (word) {
   }
   return resultArr;
 };
+
+//-----------------------------------------------------------------------------------------------------------//
+// Two fighters, one winner
+
+function declareWinner(fighter1, fighter2, firstAttacker) {
+  let attacker = firstAttacker === fighter1.name ? fighter1 : fighter2;
+  let defender = attacker === fighter1 ? fighter2 : fighter1;
+
+  while (fighter1.health > 0 && fighter2.health > 0) {
+    defender.health -= attacker.damagePerAttack;
+
+    if (defender.health <= 0) {
+      return attacker.name;
+    }
+
+    [attacker, defender] = [defender, attacker];
+  }
+}

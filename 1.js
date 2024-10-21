@@ -137,3 +137,13 @@ function smallEnough(a, limit) {
   maxNumber = Math.max(...a);
   return maxNumber > limit ? false : true;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Anagram Detection
+
+var isAnagram = function (test, original) {
+  test = test.toLowerCase();
+  original = original.toLowerCase();
+
+  return test.split("").sort().join("") === original.split("").sort().join("");
+};

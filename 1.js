@@ -147,3 +147,10 @@ var isAnagram = function (test, original) {
 
   return test.split("").sort().join("") === original.split("").sort().join("");
 };
+
+//-----------------------------------------------------------------------------------------------------------//
+// Form The Minimum
+function minValue(values) {
+  let uniqueNumber = new Set(values);
+  return Number([...uniqueNumber].sort().join(""));
+}

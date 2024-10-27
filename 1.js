@@ -150,7 +150,23 @@ var isAnagram = function (test, original) {
 
 //-----------------------------------------------------------------------------------------------------------//
 // Form The Minimum
+
 function minValue(values) {
   let uniqueNumber = new Set(values);
   return Number([...uniqueNumber].sort().join(""));
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// Maximum Multiple
+
+function maxMultiple(divisor, bound) {
+  let minMultipleInRange = 0;
+
+  for (let i = 0; i <= bound; i++) {
+    if (i % divisor === 0) {
+      minMultipleInRange = i;
+    }
+  }
+
+  return minMultipleInRange;
 }

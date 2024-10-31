@@ -199,3 +199,12 @@ function checkExam(array1, array2) {
 
   return Math.max(score, 0);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Summing a number's digits
+
+function sumDigits(number) {
+  return Array.from(String(number).replace("-", ""))
+    .map(Number)
+    .reduce((a, b) => a + b);
+}

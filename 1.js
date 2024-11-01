@@ -208,3 +208,24 @@ function sumDigits(number) {
     .map(Number)
     .reduce((a, b) => a + b);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Fix string case
+function solve(s) {
+  let lower = 0;
+  let upper = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === s[i].toLowerCase()) {
+      lower += 1;
+    } else {
+      upper += 1;
+    }
+  }
+
+  if (lower === upper) {
+    return s.toLowerCase();
+  } else {
+    return lower > upper ? s.toLowerCase() : s.toUpperCase();
+  }
+}

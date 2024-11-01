@@ -211,6 +211,7 @@ function sumDigits(number) {
 
 //-----------------------------------------------------------------------------------------------------------//
 // Fix string case
+
 function solve(s) {
   let lower = 0;
   let upper = 0;
@@ -227,5 +228,22 @@ function solve(s) {
     return s.toLowerCase();
   } else {
     return lower > upper ? s.toLowerCase() : s.toUpperCase();
+  }
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// Factorial
+
+function factorial(n) {
+  if (n < 0 || n > 12) {
+    throw new RangeError();
+  } else if (n === 0) {
+    return 1;
+  } else {
+    let answer = 1;
+    for (let i = 1; i <= n; i++) {
+      answer *= i;
+    }
+    return answer;
   }
 }

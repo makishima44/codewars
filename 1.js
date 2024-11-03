@@ -247,3 +247,10 @@ function factorial(n) {
     return answer;
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Flatten and sort an array
+
+function flattenAndSort(array) {
+  return array.flat().sort((a, b) => a - b);
+}

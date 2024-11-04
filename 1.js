@@ -266,3 +266,29 @@ function sumOfMinimums(arr) {
 
   return sum;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Alternate capitalization
+
+function capitalize(s) {
+  let answer = [];
+
+  for (let i = 0; i < 2; i++) {
+    answer.push(
+      s
+        .split("")
+        .map((el, index) => {
+          return i % 2 === 0
+            ? index % 2 !== 0
+              ? el.toLowerCase()
+              : el.toUpperCase()
+            : index % 2 !== 0
+            ? el.toUpperCase()
+            : el.toLowerCase();
+        })
+        .join("")
+    );
+  }
+
+  return answer;
+}

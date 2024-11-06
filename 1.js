@@ -292,3 +292,19 @@ function capitalize(s) {
 
   return answer;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Row Weights
+
+function rowWeights(array) {
+  let firstTeam = 0;
+  let secondTeam = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (i % 2 !== 0) {
+      secondTeam += array[i];
+    } else {
+      firstTeam += array[i];
+    }
+  }
+  return [firstTeam, secondTeam];
+}

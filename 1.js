@@ -330,3 +330,11 @@ function isLeapYear(year) {
 function factorial(n) {
   return n ? n * factorial(n - 1) : 1;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Remove duplicate words
+
+function removeDuplicateWords(s) {
+  let uniqueString = new Set(s.split(" "));
+  return [...uniqueString].join(" ");
+}

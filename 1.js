@@ -323,3 +323,10 @@ function isLeapYear(year) {
     return false;
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Factorial
+
+function factorial(n) {
+  return n ? n * factorial(n - 1) : 1;
+}

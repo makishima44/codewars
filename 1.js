@@ -338,3 +338,22 @@ function removeDuplicateWords(s) {
   let uniqueString = new Set(s.split(" "));
   return [...uniqueString].join(" ");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+
+function countDevelopers(list) {
+  count = 0;
+
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].continent === "Europe" && list[i].language === "JavaScript") {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+
+
+
+

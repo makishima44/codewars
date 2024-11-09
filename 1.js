@@ -360,3 +360,15 @@ function countDevelopers(list) {
 function getEvenNumbers(numbersArray) {
   return numbersArray.filter((el) => el % 2 === 0);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Largest pair sum in array
+
+function largestPairSum(numbers) {
+  let numbersCopy = [...numbers];
+  let firstMaxValue = Math.max(...numbersCopy);
+  numbersCopy.splice(numbersCopy.indexOf(firstMaxValue), 1);
+  let secondMaxValue = Math.max(...numbersCopy);
+
+  return firstMaxValue + secondMaxValue;
+}

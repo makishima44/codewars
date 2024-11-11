@@ -375,6 +375,7 @@ function largestPairSum(numbers) {
 
 //-----------------------------------------------------------------------------------------------------------//
 // Are the numbers in order?
+
 function inAscOrder(arr) {
   let sortArr = [...arr].sort((a, b) => a - b);
 
@@ -386,3 +387,10 @@ function inAscOrder(arr) {
 
   return true;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Greet Me
+
+var greet = function (name) {
+  return `Hello ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!`;
+};

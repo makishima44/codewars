@@ -435,3 +435,10 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
 function noOdds(values) {
   return values.filter((el) => el % 2 === 0);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Even numbers in an array
+
+function evenNumbers(array, number) {
+  return array.filter((el) => el % 2 === 0).slice(-number);
+}

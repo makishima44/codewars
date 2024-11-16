@@ -442,3 +442,14 @@ function noOdds(values) {
 function evenNumbers(array, number) {
   return array.filter((el) => el % 2 === 0).slice(-number);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sum of Cubes
+
+function sumCubes(n) {
+  return Array.from({ length: n }, (_, i) => i + 1)
+    .map((el) => Math.pow(el, 3))
+    .reduce((sum, currentEl) => sum + currentEl);
+}
+
+console.log(sumCubes(5));

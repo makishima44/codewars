@@ -452,4 +452,17 @@ function sumCubes(n) {
     .reduce((sum, currentEl) => sum + currentEl);
 }
 
-console.log(sumCubes(5));
+//-----------------------------------------------------------------------------------------------------------//
+// Bumps in the Road
+
+function bump(x) {
+  let array = x.split("");
+  let count = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === "n") {
+      count++;
+    }
+  }
+  return count > 15 ? "Car Dead" : "Woohoo!";
+}

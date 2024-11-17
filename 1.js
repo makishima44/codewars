@@ -466,3 +466,24 @@ function bump(x) {
   }
   return count > 15 ? "Car Dead" : "Woohoo!";
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//Sorted? yes? no? how?
+
+function isSortedAndHow(array) {
+  let ascending = true;
+  let descending = true;
+
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < array[i - 1]) {
+      ascending = false;
+    }
+    if (array[i] > array[i - 1]) {
+      descending = false;
+    }
+  }
+
+  if (ascending) return "yes, ascending";
+  if (descending) return "yes, descending";
+  return "no";
+}

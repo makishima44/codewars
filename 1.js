@@ -487,3 +487,30 @@ function isSortedAndHow(array) {
   if (descending) return "yes, descending";
   return "no";
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Alphabet war
+
+function alphabetWar(fight) {
+  let leftSidePower = { w: 4, p: 3, b: 2, s: 1 };
+  let rightSidePower = { m: 4, q: 3, d: 2, z: 1 };
+
+  let leftSideScore = 0;
+  let rightSideScore = 0;
+
+  for (const char of fight) {
+    if (leftSidePower[char]) {
+      leftSideScore += leftSidePower[char];
+    } else if (rightSidePower[char]) {
+      rightSideScore += rightSidePower[char];
+    }
+  }
+
+  if (leftSideScore > rightSideScore) {
+    return "Left side wins!";
+  } else if (rightSideScore > leftSideScore) {
+    return "Right side wins!";
+  } else {
+    return "Let's fight again!";
+  }
+}

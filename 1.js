@@ -514,3 +514,11 @@ function alphabetWar(fight) {
     return "Let's fight again!";
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Reverse a Number
+
+function reverseNumber(n) {
+  const reversed = Math.abs(n).toString().split("").reverse().join("");
+  return Math.sign(n) * parseInt(reversed, 10);
+}

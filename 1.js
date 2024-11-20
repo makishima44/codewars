@@ -522,3 +522,19 @@ function reverseNumber(n) {
   const reversed = Math.abs(n).toString().split("").reverse().join("");
   return Math.sign(n) * parseInt(reversed, 10);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Reverse a Number
+
+function adjacentElementsProduct(array) {
+  let maxValue = array[0] * array[1];
+
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] * array[i + 1] > maxValue) {
+      maxValue = array[i] * array[i + 1];
+    }
+  }
+
+  return maxValue;
+}
+

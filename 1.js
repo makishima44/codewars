@@ -538,3 +538,14 @@ function adjacentElementsProduct(array) {
   return maxValue;
 }
 
+//-----------------------------------------------------------------------------------------------------------//
+// Find the vowels
+
+function vowelIndices(word) {
+  const vowels = ["a", "e", "i", "o", "u", "y"];
+
+  return word
+    .split("")
+    .map((el, index) => (vowels.includes(el.toLowerCase()) ? index + 1 : -1))
+    .filter((index) => index !== -1);
+}

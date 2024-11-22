@@ -556,3 +556,13 @@ function vowelIndices(word) {
 function toNumberArray(stringarray) {
   return stringarray.map((el) => Number(el));
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sort the Gift Code
+
+function sortGiftCode(code) {
+  return code
+    .split("")
+    .sort((a, b) => a.localeCompare(b))
+    .join("");
+}

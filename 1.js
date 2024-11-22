@@ -549,3 +549,10 @@ function vowelIndices(word) {
     .map((el, index) => (vowels.includes(el.toLowerCase()) ? index + 1 : -1))
     .filter((index) => index !== -1);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Convert an array of strings to array of numbers
+
+function toNumberArray(stringarray) {
+  return stringarray.map((el) => Number(el));
+}

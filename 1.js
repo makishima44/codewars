@@ -566,3 +566,19 @@ function sortGiftCode(code) {
     .sort((a, b) => a.localeCompare(b))
     .join("");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sort the Gift Code
+
+function findLongest(array) {
+  let arrayString = array.map((el) => String(el));
+  let mostDigit = arrayString[0];
+
+  for (let i = 1; i < array.length; i++) {
+    if (arrayString[i].length > mostDigit.length) {
+      mostDigit = arrayString[i];
+    }
+  }
+
+  return Number(mostDigit);
+}

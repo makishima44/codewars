@@ -582,3 +582,10 @@ function findLongest(array) {
 
   return Number(mostDigit);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Number of Decimal Digits
+
+function digits(n) {
+  return String(n).split("").length;
+}

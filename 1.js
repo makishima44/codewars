@@ -603,3 +603,12 @@ function isPowerOfTwo(n) {
 
   return true;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// All unique
+
+function hasUniqueChars(str) {
+  let arr = str.split("");
+  let uniqueArr = [...new Set(str.split(""))];
+  return JSON.stringify(arr) === JSON.stringify(uniqueArr);
+}

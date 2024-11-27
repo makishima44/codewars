@@ -612,3 +612,10 @@ function hasUniqueChars(str) {
   let uniqueArr = [...new Set(str.split(""))];
   return JSON.stringify(arr) === JSON.stringify(uniqueArr);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sum even numbers
+
+function sumEvenNumbers(input) {
+  return input.filter((el) => el % 2 === 0).reduce((sum, evenNumber) => sum + evenNumber, 0);
+}

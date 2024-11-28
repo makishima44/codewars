@@ -619,3 +619,23 @@ function hasUniqueChars(str) {
 function sumEvenNumbers(input) {
   return input.filter((el) => el % 2 === 0).reduce((sum, evenNumber) => sum + evenNumber, 0);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Switcheroo
+
+function switcheroo(x) {
+  let arr = x.split("");
+  let answer = "";
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "a") {
+      answer += "b";
+    } else if (arr[i] === "b") {
+      answer += "a";
+    } else {
+      answer += arr[i];
+    }
+  }
+
+  return answer;
+}

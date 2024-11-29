@@ -639,3 +639,10 @@ function switcheroo(x) {
 
   return answer;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sum of array singles
+
+function repeats(arr) {
+  return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num)).reduce((sum, num) => sum + num, 0);
+}

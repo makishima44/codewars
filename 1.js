@@ -646,3 +646,21 @@ function switcheroo(x) {
 function repeats(arr) {
   return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num)).reduce((sum, num) => sum + num, 0);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//Odd-Even String Sort
+
+function sortMyString(S) {
+  let evenNumber = "";
+  let oddNumber = "";
+
+  for (let i = 0; i < S.length; i++) {
+    if (i % 2 === 0) {
+      evenNumber += S[i];
+    } else {
+      oddNumber += S[i];
+    }
+  }
+
+  return `${evenNumber} ${oddNumber}`;
+}

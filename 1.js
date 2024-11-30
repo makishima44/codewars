@@ -664,3 +664,17 @@ function sortMyString(S) {
 
   return `${evenNumber} ${oddNumber}`;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//Filter the number
+
+function filterString(value) {
+  let numberArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+  return Number(
+    value
+      .split("")
+      .filter((el) => numberArr.includes(el))
+      .join("")
+  );
+}

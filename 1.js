@@ -678,3 +678,16 @@ function filterString(value) {
       .join("")
   );
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Divide and Conquer
+
+function divCon(x) {
+  let numberSum = x.filter((el) => el === Number(el)).reduce((sum, el) => sum + el, 0);
+  let stringSum = x
+    .filter((el) => el !== Number(el))
+    .map((el) => Number(el))
+    .reduce((sum, el) => sum + el, 0);
+
+  return numberSum - stringSum;
+}

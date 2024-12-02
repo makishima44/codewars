@@ -691,3 +691,18 @@ function divCon(x) {
 
   return numberSum - stringSum;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Build a square
+
+function generateShape(integer) {
+  let str = "";
+  for (let i = 1; i <= integer * integer; i++) {
+    str += "+";
+    if (i % integer === 0 && i !== integer * integer) {
+      str += "\n";
+    }
+  }
+
+  return str;
+}

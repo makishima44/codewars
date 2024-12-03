@@ -706,3 +706,13 @@ function generateShape(integer) {
 
   return str;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Build a square
+
+function cookingTime(eggs) {
+  if (eggs <= 0) return 0;
+  else {
+    return Math.ceil(eggs / 8) * 5;
+  }
+}

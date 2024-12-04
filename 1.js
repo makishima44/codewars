@@ -726,5 +726,3 @@ function spinWords(string) {
     .map((el) => (el.length < 5 ? el : el.split("").reverse().join("")))
     .join(" ");
 }
-
-console.log(spinWords("This is another test"));

@@ -716,3 +716,15 @@ function cookingTime(eggs) {
     return Math.ceil(eggs / 8) * 5;
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Stop gninnipS My sdroW!
+
+function spinWords(string) {
+  return string
+    .split(" ")
+    .map((el) => (el.length < 5 ? el : el.split("").reverse().join("")))
+    .join(" ");
+}
+
+console.log(spinWords("This is another test"));

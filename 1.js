@@ -726,3 +726,13 @@ function spinWords(string) {
     .map((el) => (el.length < 5 ? el : el.split("").reverse().join("")))
     .join(" ");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Find the odd int
+
+function findOdd(A) {
+  for (let i = 0; i < A.length; i++) {
+    const count = A.filter((el) => el === A[i]).length;
+    if (count % 2 !== 0) return A[i];
+  }
+}

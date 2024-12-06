@@ -736,3 +736,10 @@ function findOdd(A) {
     if (count % 2 !== 0) return A[i];
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Array.diff
+
+function arrayDiff(a, b) {
+  return a.filter((el) => !b.includes(el));
+}

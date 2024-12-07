@@ -759,3 +759,18 @@ function digitalRoot(n) {
 
   return answer;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Find The Parity Outlier
+
+function findOutlier(integers) {
+  let odd = [];
+  let even = [];
+
+  for (let i = 0; i < integers.length; i++) {
+    if (integers[i] % 2 === 0) even.push(integers[i]);
+    else odd.push(integers[i]);
+  }
+
+  return odd.length > even.length ? even[0] : odd[0];
+}

@@ -743,3 +743,19 @@ function findOdd(A) {
 function arrayDiff(a, b) {
   return a.filter((el) => !b.includes(el));
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sum of Digits / Digital Root
+
+function digitalRoot(n) {
+  let answer = n;
+
+  while (answer >= 10) {
+    answer = String(answer)
+      .split("")
+      .map(Number)
+      .reduce((sum, num) => sum + num, 0);
+  }
+
+  return answer;
+}

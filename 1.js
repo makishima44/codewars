@@ -809,3 +809,18 @@ function validParentheses(parenStr) {
 
   return count === 0;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Maximum Length Difference
+
+function mxdiflg(a1, a2) {
+  if (a1.length === 0 || a2.length === 0) {
+    return -1;
+  }
+
+  let arr1 = a1.map((el) => (el = el.length));
+  let arr2 = a2.map((el) => (el = el.length));
+  let version1 = Math.abs(Math.max(...arr2) - Math.min(...arr1));
+  let version2 = Math.abs(Math.max(...arr1) - Math.min(...arr2));
+  return version1 > version2 ? version1 : version2;
+}

@@ -774,3 +774,19 @@ function findOutlier(integers) {
 
   return odd.length > even.length ? even[0] : odd[0];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Find The Parity Outlier
+
+function persistence(num) {
+  let count = 0;
+  let arrNum = String(num).split("").map(Number);
+
+  while (arrNum.length > 1) {
+    x = arrNum.reduce((sum, el) => sum * el, 1);
+    count++;
+    arrNum = String(x).split("").map(Number);
+  }
+
+  return count;
+}

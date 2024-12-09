@@ -824,3 +824,26 @@ function mxdiflg(a1, a2) {
   let version2 = Math.abs(Math.max(...arr1) - Math.min(...arr2));
   return version1 > version2 ? version1 : version2;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Valid Braces
+
+function validBraces(braces) {
+  const stack = [];
+  const pairs = {
+    "(": ")",
+    "[": "]",
+    "{": "}",
+  };
+
+  for (const char of braces) {
+    if (pairs[char]) {
+      stack.push(pairs[char]);
+    } else if (stack.pop() !== char) {
+      return false;
+    }
+  }
+  return stack.length === 0;
+}
+
+

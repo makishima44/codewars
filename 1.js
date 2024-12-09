@@ -846,4 +846,21 @@ function validBraces(braces) {
   return stack.length === 0;
 }
 
+//-----------------------------------------------------------------------------------------------------------//
+//   The Supermarket Queue
 
+function queueTime(customers, n) {
+  if (customers.length === 0) return 0;
+  if (customers.length <= n) return Math.max(...customers);
+
+  let cashierArr = Array(n).fill(0);
+
+  for (let el of customers) {
+    let min = Math.min(...cashierArr);
+    let index = cashierArr.indexOf(min);
+
+    cashierArr[index] += el;
+  }
+
+  return Math.max(...cashierArr);
+}

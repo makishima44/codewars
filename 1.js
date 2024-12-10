@@ -864,3 +864,24 @@ function queueTime(customers, n) {
 
   return Math.max(...cashierArr);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//  Mexican Wave
+
+function wave(str) {
+  let waveArr = [];
+
+  for (let i = 0; i < str.length; i++) {
+    let waveStr = "";
+    if (str[i] === " ") continue;
+    for (let j = 0; j < str.length; j++) {
+      if (j === i) {
+        waveStr += str[j].toUpperCase();
+      } else {
+        waveStr += str[j].toLowerCase();
+      }
+    }
+    waveArr.push(waveStr);
+  }
+  return waveArr;
+}

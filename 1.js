@@ -885,3 +885,20 @@ function wave(str) {
   }
   return waveArr;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//  Count characters in your string
+
+function count(string) {
+  let answer = {};
+
+  for (let i = 0; i < string.length; i++) {
+    if (!answer.hasOwnProperty(string[i])) {
+      answer[string[i]] = 1;
+    } else if (string[i] in answer) {
+      answer[string[i]] += 1;
+    }
+  }
+
+  return answer;
+}

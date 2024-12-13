@@ -902,3 +902,14 @@ function count(string) {
 
   return answer;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//  max diff - easy
+
+function maxDiff(list) {
+  if (list.length <= 1) {
+    return 0;
+  } else {
+    return Math.max(...list) - Math.min(...list);
+  }
+}

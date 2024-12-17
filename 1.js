@@ -913,3 +913,27 @@ function maxDiff(list) {
     return Math.max(...list) - Math.min(...list);
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Split Strings
+
+function solution(str) {
+  let arrLetters = str.split("");
+  let resultArr = [];
+  let strLetters = "";
+
+  for (let i = 0; i < arrLetters.length; i++) {
+    strLetters += arrLetters[i];
+
+    if (strLetters.length === 2) {
+      resultArr.push(strLetters);
+      strLetters = "";
+    }
+  }
+
+  if (arrLetters.length % 2 !== 0) {
+    resultArr.push(arrLetters[arrLetters.length - 1] + "_");
+  }
+
+  return resultArr;
+}

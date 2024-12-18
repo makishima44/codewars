@@ -937,3 +937,19 @@ function solution(str) {
 
   return resultArr;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Counting Duplicates
+
+function duplicateCount(text) {
+  let str = text.toLowerCase();
+  let arrDuplicates = [];
+
+  for (let i = 0; i < str.length; i++) {
+    let matches = str.match(new RegExp(str[i], "g"));
+    if (matches && matches.length > 1 && !arrDuplicates.includes(str[i])) {
+      arrDuplicates.push(str[i]);
+    }
+  }
+  return arrDuplicates.length;
+}

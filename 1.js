@@ -953,3 +953,21 @@ function duplicateCount(text) {
   }
   return arrDuplicates.length;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Counting Duplicates
+
+function duplicateEncode(word) {
+  let strLow = word.toLowerCase();
+  let answer = "";
+
+  for (let i = 0; i < strLow.length; i++) {
+    if (strLow.indexOf(strLow[i]) !== strLow.lastIndexOf(strLow[i])) {
+      answer += ")";
+    } else {
+      answer += "(";
+    }
+  }
+
+  return answer;
+}

@@ -1065,3 +1065,17 @@ function high(x) {
   const maxScore = Math.max(...scoreArr);
   return wordsArr[scoreArr.indexOf(maxScore)];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Highest Scoring Word
+
+function twoSum(numbers, target) {
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      if (numbers[i] + numbers[j] === target) {
+        return [i, j];
+      }
+    }
+  }
+  return [];
+}

@@ -1067,7 +1067,7 @@ function high(x) {
 }
 
 //-----------------------------------------------------------------------------------------------------------//
-// Highest Scoring Word
+// Two Sum
 
 function twoSum(numbers, target) {
   for (let i = 0; i < numbers.length; i++) {
@@ -1079,3 +1079,24 @@ function twoSum(numbers, target) {
   }
   return [];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Encrypt this!
+
+var encryptThis = function (text) {
+  return text
+    .split(" ")
+    .map((word) => {
+      if (word.length === 0) return "";
+      if (word.length === 1) return word.charCodeAt(0).toString();
+      if (word.length === 2) return `${word.charCodeAt(0)}${word[1]}`;
+
+      let firstChar = word.charCodeAt(0);
+      let textArr = word.split("");
+
+      [textArr[1], textArr[textArr.length - 1]] = [textArr[textArr.length - 1], textArr[1]];
+
+      return `${firstChar}${textArr.slice(1).join("")}`;
+    })
+    .join(" ");
+};

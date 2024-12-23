@@ -1100,3 +1100,20 @@ var encryptThis = function (text) {
     })
     .join(" ");
 };
+
+//-----------------------------------------------------------------------------------------------------------//
+// Backspaces in string
+
+function cleanString(s) {
+  let answer = "";
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] !== "#") {
+      answer += s[i];
+    } else if (s[i] === "#") {
+      answer = answer.slice(0, answer.length - 1);
+    }
+  }
+
+  return answer;
+}

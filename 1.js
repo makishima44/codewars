@@ -1117,3 +1117,45 @@ function cleanString(s) {
 
   return answer;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sums of Parts
+
+function partsSums(ls) {
+  let totalSum = ls.reduce((sum, el) => sum + el, 0);
+  let answerArr = [];
+
+  for (let i = 0; i <= ls.length; i++) {
+    answerArr.push(totalSum);
+    if (i < ls.length) {
+      totalSum -= ls[i];
+    }
+  }
+
+  return answerArr;
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// Give me a Diamond
+
+function diamond(n) {
+  if (n % 2 === 0 || n <= 0) return null;
+
+  let answer = "";
+  let middle = Math.ceil(n / 2);
+  let symbol = "*";
+
+  for (let i = 1; i <= middle; i++) {
+    let spaces = " ".repeat(middle - i);
+    let stars = symbol.repeat(2 * i - 1);
+    answer += spaces + stars + "\n";
+  }
+
+  for (let i = middle - 1; i >= 1; i--) {
+    let spaces = " ".repeat(middle - i);
+    let stars = symbol.repeat(2 * i - 1);
+    answer += spaces + stars + "\n";
+  }
+
+  return answer;
+}

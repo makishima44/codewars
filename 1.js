@@ -1159,3 +1159,11 @@ function diamond(n) {
 
   return answer;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Simple beads count
+
+function countRedBeads(n) {
+  if (n < 2) return 0;
+  return (n - 1) * 2;
+}

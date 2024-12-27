@@ -1167,3 +1167,26 @@ function countRedBeads(n) {
   if (n < 2) return 0;
   return (n - 1) * 2;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// WeIrD StRiNg CaSe
+
+function toWeirdCase(string) {
+  const wordsArr = string.split(" ");
+  let answerArr = [];
+
+  for (let word of wordsArr) {
+    let answerWord = "";
+
+    for (let i = 0; i < word.length; i++) {
+      if (i % 2 === 0) answerWord += word[i].toUpperCase();
+      else answerWord += word[i].toLowerCase();
+    }
+
+    answerArr.push(answerWord);
+  }
+
+  return answerArr.join(" ");
+}
+
+console.log(toWeirdCase("Weird string case"));

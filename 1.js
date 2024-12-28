@@ -1189,4 +1189,12 @@ function toWeirdCase(string) {
   return answerArr.join(" ");
 }
 
-console.log(toWeirdCase("Weird string case"));
+//-----------------------------------------------------------------------------------------------------------//
+// Your order, please
+
+function order(words) {
+  let wordsArr = words.split(" ");
+  let answerArr = wordsArr.sort((a, b) => a.match(/\d+/g) - b.match(/\d+/g));
+
+  return answerArr.join(" ");
+}

@@ -41,3 +41,19 @@ Array.prototype.even = function () {
 Array.prototype.odd = function () {
   return this.filter((el) => el % 2 !== 0);
 };
+
+//-----------------------------------------------------------------------------------------------------------//
+// Simple string characters
+
+function solve(s) {
+  if (s === "") return [0, 0, 0, 0];
+
+  if (s.length) {
+    let upper = s.match(/[A-Z]/g) || [];
+    let lower = s.match(/[a-z]/g) || [];
+    let numbers = s.match(/\d/g) || [];
+    let specChar = s.match(/[^a-zA-Z0-9\s]/g) || [];
+
+    return [upper.length, lower.length, numbers.length, specChar.length];
+  }
+}

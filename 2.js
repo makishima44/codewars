@@ -57,3 +57,13 @@ function solve(s) {
     return [upper.length, lower.length, numbers.length, specChar.length];
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Smallest value of an array
+
+function min(arr, toReturn) {
+  let minValue = Math.min(...arr);
+
+  if (toReturn === "value") return minValue;
+  if (toReturn === "index") return arr.indexOf(minValue);
+}

@@ -67,3 +67,17 @@ function min(arr, toReturn) {
   if (toReturn === "value") return minValue;
   if (toReturn === "index") return arr.indexOf(minValue);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Bit Counting
+
+var countBits = function (n) {
+  let binaryArr = n.toString(2).split("");
+  let count = 0;
+
+  for (let number of binaryArr) {
+    if (number === "1") count++;
+  }
+
+  return count;
+};

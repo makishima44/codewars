@@ -98,3 +98,20 @@ function toCamelCase(str) {
 
   return answer.join("");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Delete occurrences of an element if it occurs more than n times
+
+function deleteNth(arr, n) {
+  let count = {};
+  let answer = [];
+
+  for (const num of arr) {
+    count[num] = (count[num] || 0) + 1;
+    if (count[num] <= n) {
+      answer.push(num);
+    }
+  }
+
+  return answer;
+}

@@ -108,10 +108,37 @@ function deleteNth(arr, n) {
 
   for (const num of arr) {
     count[num] = (count[num] || 0) + 1;
+
     if (count[num] <= n) {
       answer.push(num);
     }
   }
 
   return answer;
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// The Vowel Code
+
+function encode(string) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  return string.replace(/[aeiou]/g, (match) => code[match]);
+}
+
+function decode(string) {
+  let code = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u",
+  };
+
+  return string.replace(/\d/g, (match) => code[match]);
 }

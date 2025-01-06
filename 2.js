@@ -162,7 +162,7 @@ function expandedForm(num) {
 }
 
 //-----------------------------------------------------------------------------------------------------------//
-// Validate Credit Card Number
+//  Validate Credit Card Number
 
 function validate(n) {
   let arr = n.toString().split("").map(Number);

@@ -142,3 +142,59 @@ function decode(string) {
 
   return string.replace(/\d/g, (match) => code[match]);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Write Number in Expanded Form
+
+function expandedForm(num) {
+  let str = num.toString();
+  let result = [];
+
+  for (let i = 0; i < str.length; i++) {
+    const digit = str[i];
+    const placeValue = Math.pow(10, str.length - 1 - i);
+    if (digit !== "0") {
+      result.push(digit * placeValue);
+    }
+  }
+
+  return result.join(" + ");
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// Validate Credit Card Number
+
+function validate(n) {
+  let arr = n.toString().split("").map(Number);
+  let newArr = [];
+
+  if (arr.length % 2 === 0) {
+    newArr = arr.map((el, index) => {
+      if (index % 2 === 0) {
+        return el * 2;
+      }
+      return el;
+    });
+  } else if (arr.length % 2 !== 0) {
+    newArr = arr.map((el, index) => {
+      if (index % 2 !== 0) {
+        return el * 2;
+      }
+      return el;
+    });
+  }
+
+  let sum = newArr
+    .map((el) => {
+      if (el > 9) {
+        return el
+          .toString()
+          .split("")
+          .reduce((sum, el) => sum + parseInt(el), 0);
+      }
+      return Number(el);
+    })
+    .reduce((sum, el) => sum + el, 0);
+
+  return sum % 10 === 0 ? true : false;
+}

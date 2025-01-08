@@ -198,3 +198,18 @@ function validate(n) {
 
   return sum % 10 === 0 ? true : false;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+//  Ordered Count of Characters
+
+const orderedCount = function (text) {
+  let uniqueArr = [...new Set(text.split(""))];
+  let resultArr = [];
+
+  for (let char of uniqueArr) {
+    const regex = new RegExp(`${char}`, "g");
+    resultArr.push([char, text.match(regex).length]);
+  }
+
+  return resultArr;
+};

@@ -213,3 +213,27 @@ const orderedCount = function (text) {
 
   return resultArr;
 };
+
+//-----------------------------------------------------------------------------------------------------------//
+// Break camelCase
+
+function solution(string) {
+  let arr = [];
+  let word = "";
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === string[i].toUpperCase() && i !== 0) {
+      arr.push(word);
+      word = string[i];
+    } else {
+      word += string[i];
+    }
+  }
+
+  if (word) {
+    arr.push(word);
+  }
+
+  return arr.join(" ");
+}
+

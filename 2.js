@@ -241,16 +241,14 @@ function solution(string) {
 // Break camelCase
 
 function dataReverse(data) {
-  for (let i = 0; i < data.length; i++) {
-    const segmentSize = 8;
-    let segments = [];
+  const segmentSize = 8;
+  let segments = [];
 
-    for (let i = 0; i < data.length; i += segmentSize) {
-      const segment = data.slice(i, i + segmentSize);
-      segments.push(segment);
-    }
-
-    segments.reverse();
-    return segments.flat();
+  for (let i = 0; i < data.length; i += segmentSize) {
+    const segment = data.slice(i, i + segmentSize);
+    segments.push(segment);
   }
+
+  segments.reverse();
+  return segments.flat();
 }

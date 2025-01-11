@@ -252,3 +252,17 @@ function dataReverse(data) {
   segments.reverse();
   return segments.flat();
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Reverse every other word in the string
+
+function reverse(str) {
+  const arr = str.split(" ");
+  return arr
+    .map((el, index) => {
+      if (index % 2 !== 0) return el.split("").reverse().join("");
+      else return el;
+    })
+    .join(" ")
+    .trim();
+}

@@ -266,3 +266,20 @@ function reverse(str) {
     .join(" ")
     .trim();
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Lost number in number sequence
+
+function findDeletedNumber(arr, mixArr) {
+  const sortMixArr = mixArr.sort((a, b) => a - b);
+  let result = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== sortMixArr[i]) {
+      result = arr[i];
+      break;
+    }
+  }
+
+  return result;
+}

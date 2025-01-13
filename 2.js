@@ -283,3 +283,24 @@ function findDeletedNumber(arr, mixArr) {
 
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Kebabize
+
+function kebabize(str) {
+  let result = "";
+  const strWithoutNumber = str.replace(/[0-9]/g, "");
+
+  for (let i = 0; i < strWithoutNumber.length; i++) {
+    if (strWithoutNumber[i] !== strWithoutNumber[i].toUpperCase()) {
+      result += strWithoutNumber[i];
+    } else {
+      if (i === 0) {
+        result += `${strWithoutNumber[i].toLowerCase()}`;
+      } else {
+        result += `-${strWithoutNumber[i].toLowerCase()}`;
+      }
+    }
+  }
+  return result;
+}

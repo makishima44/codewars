@@ -304,3 +304,16 @@ function kebabize(str) {
   }
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+
+function isRubyComing(list) {
+  let result = false;
+
+  for (const user of list) {
+    if (user.language === "Ruby") result = true;
+  }
+
+  return result;
+}

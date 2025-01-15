@@ -317,3 +317,26 @@ function isRubyComing(list) {
 
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Make the Deadfish Swim
+
+function parse(data) {
+  let value = 0;
+  let result = [];
+
+  const instructions = {
+    i: () => value++,
+    d: () => value--,
+    s: () => (value *= value),
+    o: () => result.push(value),
+  };
+
+  for (const char of data) {
+    if (instructions[char]) {
+      instructions[char]();
+    }
+  }
+
+  return result;
+}

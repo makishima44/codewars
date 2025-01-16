@@ -340,3 +340,22 @@ function parse(data) {
 
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Strong Number (Special Numbers Series #2)
+
+function strong(n) {
+  let arr = Array.from(String(n), Number);
+  let arrFactorials = [];
+
+  for (const num of arr) {
+    let factorial = 1;
+    for (let i = 1; i <= num; i++) {
+      factorial *= i;
+    }
+
+    arrFactorials.push(factorial);
+  }
+
+  return arrFactorials.reduce((sum, num) => sum + num, 0) === n ? "STRONG!!!!" : "Not Strong !!";
+}

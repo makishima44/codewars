@@ -359,3 +359,18 @@ function strong(n) {
 
   return arrFactorials.reduce((sum, num) => sum + num, 0) === n ? "STRONG!!!!" : "Not Strong !!";
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// +1 Array
+
+function upArray(arr) {
+  if ((arr.length <= 0) | arr.some((el) => (el < 0) | (String(el).length > 1))) return null;
+
+  const leadingZeros = arr.findIndex((el) => el !== 0);
+  const leadingZeroCount = leadingZeros === -1 ? arr.length : leadingZeros;
+
+  const incremented = (BigInt(arr.join("")) + 1n).toString();
+  const result = Array.from(incremented, Number);
+
+  return Array(leadingZeroCount).fill(0).concat(result);
+}

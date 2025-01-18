@@ -374,3 +374,10 @@ function upArray(arr) {
 
   return Array(leadingZeroCount).fill(0).concat(result);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Array element parity
+
+function solve(arr) {
+  return arr.filter((num) => !arr.includes(-num))[0];
+}

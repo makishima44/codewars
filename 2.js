@@ -381,3 +381,27 @@ function upArray(arr) {
 function solve(arr) {
   return arr.filter((num) => !arr.includes(-num))[0];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Balanced Number (Special Numbers Series #1 )
+
+function balancedNum(number) {
+  let arr = String(number).split("").map(Number);
+  let result = "";
+
+  if (arr.length <= 2) result = "Balanced";
+
+  let middleIndex = Math.floor(arr.length / 2);
+
+  if (arr.length % 2 !== 0) {
+    let leftSum = arr.slice(0, middleIndex).reduce((sum, num) => sum + num, 0);
+    let rightSum = arr.slice(middleIndex + 1).reduce((sum, num) => sum + num, 0);
+    result = leftSum === rightSum ? "Balanced" : "Not Balanced";
+  } else {
+    let leftSum = arr.slice(0, middleIndex - 1).reduce((sum, num) => sum + num, 0);
+    let rightSum = arr.slice(middleIndex + 1).reduce((sum, num) => sum + num, 0);
+    result = leftSum === rightSum ? "Balanced" : "Not Balanced";
+  }
+
+  return result;
+}

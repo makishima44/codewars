@@ -405,3 +405,23 @@ function balancedNum(number) {
 
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Same Array?
+function same(aArr, bArr) {
+  const sortedAArr = aArr.map((el) => el.sort()).sort();
+  const sortedbArr = bArr.map((el) => el.sort()).sort();
+  let result = true;
+
+  if (sortedAArr.length === sortedbArr.length) {
+    for (let i = 0; i < sortedAArr.length; i++) {
+      for (let j = 0; j < sortedAArr[i].length; j++) {
+        if (sortedAArr[i][j] !== sortedbArr[i][j]) {
+          result = false;
+        }
+      }
+    }
+  } else result = false;
+
+  return result;
+}

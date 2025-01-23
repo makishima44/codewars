@@ -408,6 +408,7 @@ function balancedNum(number) {
 
 //-----------------------------------------------------------------------------------------------------------//
 // Same Array?
+
 function same(aArr, bArr) {
   const sortedAArr = aArr.map((el) => el.sort()).sort();
   const sortedbArr = bArr.map((el) => el.sort()).sort();
@@ -424,4 +425,17 @@ function same(aArr, bArr) {
   } else result = false;
 
   return result;
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// Simple consecutive pairs
+
+function pairs(ar) {
+  let count = 0;
+
+  for (let i = 0; i < ar.length; i += 2) {
+    if (ar[i] - 1 === ar[i + 1] || ar[i] + 1 === ar[i + 1]) count++;
+  }
+
+  return count;
 }

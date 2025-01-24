@@ -439,3 +439,10 @@ function pairs(ar) {
 
   return count;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// String array duplicates
+
+function dup(s) {
+  return s.map((el) => el.replace(/([a-zA-Z])\1+/g, "$1"));
+}

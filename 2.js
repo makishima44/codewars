@@ -446,3 +446,18 @@ function pairs(ar) {
 function dup(s) {
   return s.map((el) => el.replace(/([a-zA-Z])\1+/g, "$1"));
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Simple Fun #318: Sort String
+
+function sortString(s) {
+  const letters = [...s]
+    .filter((char) => /[a-z]/i.test(char))
+    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+
+  let index = 0;
+
+  return [...s].map((char) => (/[a-z]/i.test(char) ? letters[index++] : char)).join("");
+}
+
+console.log(sortString("-a-c-b-"));

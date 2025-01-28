@@ -474,3 +474,14 @@ function flipNumber(n) {
 
   return result.join("");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sorted Union
+
+function uniteUnique() {
+  const arr = [...arguments].flat();
+  const uniqueArr = new Set(arr);
+  return [...uniqueArr];
+}
+
+

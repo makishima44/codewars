@@ -460,4 +460,17 @@ function sortString(s) {
   return [...s].map((char) => (/[a-z]/i.test(char) ? letters[index++] : char)).join("");
 }
 
-console.log(sortString("-a-c-b-"));
+//-----------------------------------------------------------------------------------------------------------//
+// Reversing Fun
+
+function flipNumber(n) {
+  let result = n.split("");
+
+  for (let i = 0; i < n.length; i++) {
+    let part = result.slice(i);
+    part.reverse();
+    result = result.slice(0, i).concat(part);
+  }
+
+  return result.join("");
+}

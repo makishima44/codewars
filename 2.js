@@ -484,4 +484,12 @@ function uniteUnique() {
   return [...uniqueArr];
 }
 
+//-----------------------------------------------------------------------------------------------------------//
+// Coding Meetup #2 - Higher-Order Functions Series - Greet developers
 
+function greetDevelopers(list) {
+  return list.map((el) => ({
+    ...el,
+    greeting: `Hi ${el.firstName}, what do you like the most about ${el.language}?`,
+  }));
+}

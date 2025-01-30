@@ -493,3 +493,11 @@ function greetDevelopers(list) {
     greeting: `Hi ${el.firstName}, what do you like the most about ${el.language}?`,
   }));
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Help the Fruit Guy
+
+function removeRotten(bagOfFruits) {
+  if (!bagOfFruits || bagOfFruits.length === 0) return [];
+  return bagOfFruits.map((el) => (el.startsWith("rotten") ? el.substring(6).toLowerCase() : el));
+}

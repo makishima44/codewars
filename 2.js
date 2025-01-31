@@ -501,3 +501,27 @@ function removeRotten(bagOfFruits) {
   if (!bagOfFruits || bagOfFruits.length === 0) return [];
   return bagOfFruits.map((el) => (el.startsWith("rotten") ? el.substring(6).toLowerCase() : el));
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Pair of gloves
+
+function numberOfPairs(gloves) {
+  const glovesMap = {};
+
+  gloves.forEach((el) => {
+    if (glovesMap[el]) {
+      glovesMap[el]++;
+    } else {
+      glovesMap[el] = 1;
+    }
+  });
+
+  let pairGloves = 0;
+  for (const key in glovesMap) {
+    if (glovesMap[key] >= 2) {
+      pairGloves += Math.floor(glovesMap[key] / 2);
+    }
+  }
+
+  return pairGloves;
+}

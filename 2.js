@@ -525,3 +525,24 @@ function numberOfPairs(gloves) {
 
   return pairGloves;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Decipher this!
+
+function decipherThis(str) {
+  return str
+    .split(" ")
+    .map((word) => {
+      let match = word.match(/^\d+/);
+      if (!match) return word;
+
+      let firstCharCode = parseInt(word.match(/^\d+/)[0]);
+      let rest = word.replace(/^\d+/, "").split("");
+
+      if (rest.length > 1) {
+        [rest[0], rest[rest.length - 1]] = [rest[rest.length - 1], rest[0]];
+      }
+      return String.fromCharCode(firstCharCode) + rest.join("");
+    })
+    .join(" ");
+}

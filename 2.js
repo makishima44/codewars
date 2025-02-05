@@ -546,3 +546,27 @@ function decipherThis(str) {
     })
     .join(" ");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Char Code Calculation
+
+function calc(x) {
+  const total1 = x
+    .split("")
+    .map((el) => el.charCodeAt(0))
+    .join("");
+
+  const total2 = total1.replaceAll("7", "1");
+
+  const sum1 = total1
+    .split("")
+    .map(Number)
+    .reduce((sum, el) => sum + el, 0);
+
+  const sum2 = total2
+    .split("")
+    .map(Number)
+    .reduce((sum, el) => sum + el, 0);
+
+  return sum1 - sum2;
+}

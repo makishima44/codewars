@@ -570,3 +570,26 @@ function calc(x) {
 
   return sum1 - sum2;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Longest vowel chain
+
+function solve(s) {
+  const pattern = /[aeiouAEIOU]/;
+
+  let currentCount = 0;
+  let maxCount = 0;
+
+  for (let char of s) {
+    if (pattern.test(char)) {
+      currentCount += 1;
+    } else {
+      if (currentCount > maxCount) {
+        maxCount = currentCount;
+      }
+      currentCount = 0;
+    }
+  }
+
+  return maxCount;
+}

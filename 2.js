@@ -593,3 +593,41 @@ function solve(s) {
 
   return maxCount;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// New Cashier Does Not Know About Space or Shift
+
+function getOrder(input) {
+  const menu = [
+    "burger",
+    "fries",
+    "chicken",
+    "pizza",
+    "sandwich",
+    "onionrings",
+    "milkshake",
+    "coke",
+  ];
+
+  const count = {};
+
+  menu.forEach((item) => {
+    const regex = new RegExp(item, "g");
+    const matches = input.match(regex);
+    if (matches) {
+      count[item] = matches.length;
+    }
+  });
+
+  const capitalize = (word) => word.charAt(0).toUpperCase() + word.slice(1);
+
+  const result = [];
+
+  menu.forEach((item) => {
+    for (let i = 0; i < count[item]; i++) {
+      result.push(capitalize(item));
+    }
+  });
+
+  return result.join(" ");
+}

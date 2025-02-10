@@ -631,3 +631,18 @@ function getOrder(input) {
 
   return result.join(" ");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// SevenAte9
+
+function sevenAte9(str) {
+  let numArr = str.split("");
+
+  for (let i = numArr.length - 2; i >= 1; i--) {
+    if (numArr[i] === "9" && numArr[i - 1] === "7" && numArr[i + 1] === "7") {
+      numArr.splice(i, 1);
+    }
+  }
+
+  return numArr.join("");
+}

@@ -646,3 +646,17 @@ function sevenAte9(str) {
 
   return numArr.join("");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// FIXME: Get Full Name
+
+class Dinglemouse {
+  constructor(firstName, lastName) {
+    this.firstName = firstName || "";
+    this.lastName = lastName || "";
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`.trim();
+  }
+}

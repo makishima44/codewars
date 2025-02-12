@@ -660,3 +660,10 @@ class Dinglemouse {
     return `${this.firstName} ${this.lastName}`.trim();
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sort by Last Char
+
+function last(x) {
+  return x.split(" ").sort((a, b) => a[a.length - 1].localeCompare(b[b.length - 1]));
+}

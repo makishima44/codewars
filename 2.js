@@ -667,3 +667,22 @@ class Dinglemouse {
 function last(x) {
   return x.split(" ").sort((a, b) => a[a.length - 1].localeCompare(b[b.length - 1]));
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Alphabet symmetry
+
+function solve(arr) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const filteredItems = [];
+
+  for (const word of arr) {
+    let filtered = word
+      .toLowerCase()
+      .split("")
+      .filter((el, index) => index + 1 === alphabet.indexOf(el) + 1);
+
+    filteredItems.push(filtered.length);
+  }
+
+  return filteredItems;
+}

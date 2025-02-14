@@ -686,3 +686,13 @@ function solve(arr) {
 
   return filteredItems;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Over The Road
+
+function overTheRoad(address, n) {
+  const evenLength = 2 * n;
+  const count = (address + 1) / 2;
+
+  return evenLength - (count * 2 - 2);
+}

@@ -696,3 +696,29 @@ function overTheRoad(address, n) {
 
   return evenLength - (count * 2 - 2);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Highest Rank Number in an Array
+
+function highestRank(arr) {
+  const frequencyMap = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    if (frequencyMap[arr[i]]) {
+      frequencyMap[arr[i]] += 1;
+    } else {
+      frequencyMap[arr[i]] = 1;
+    }
+  }
+
+  const maxFrequency = Math.max(...Object.values(frequencyMap));
+  const maxFrequencyArr = [];
+
+  for (const key in frequencyMap) {
+    if (frequencyMap[key] === maxFrequency) {
+      maxFrequencyArr.push(Number(key));
+    }
+  }
+
+  return Math.max(...maxFrequencyArr);
+}

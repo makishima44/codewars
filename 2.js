@@ -722,3 +722,13 @@ function highestRank(arr) {
 
   return Math.max(...maxFrequencyArr);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sort Out The Men From Boys
+
+function menFromBoys(arr) {
+  const evenUniqueSort = new Set(arr.filter((el) => el % 2 === 0).sort((a, b) => a - b));
+  const oddUniqueSort = new Set(arr.filter((el) => el % 2 !== 0).sort((a, b) => b - a));
+
+  return [...evenUniqueSort, ...oddUniqueSort];
+}

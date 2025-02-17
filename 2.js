@@ -732,3 +732,15 @@ function menFromBoys(arr) {
 
   return [...evenUniqueSort, ...oddUniqueSort];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// esreveR
+
+reverse = function (array) {
+  let reverseArr = [];
+  for (let i = 0; i < array.length; i++) {
+    reverseArr.unshift(array[i]);
+  }
+
+  return reverseArr;
+};

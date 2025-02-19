@@ -746,8 +746,28 @@ reverse = function (array) {
 };
 
 //-----------------------------------------------------------------------------------------------------------//
-//filterEvenLengthWords;
+// filterEvenLengthWords;
 
 function filterEvenLengthWords(words) {
   return words.filter((el) => el.length % 2 === 0);
+}
+
+//-----------------------------------------------------------------------------------------------------------//
+// Password maker
+
+function makePassword(phrase) {
+  return phrase
+    .split(" ")
+    .map((word) => {
+      if (word[0].toLowerCase() === "i") {
+        return 1;
+      } else if (word[0].toLowerCase() === "o") {
+        return 0;
+      } else if (word[0].toLowerCase() === "s") {
+        return 5;
+      } else {
+        return word[0];
+      }
+    })
+    .join("");
 }

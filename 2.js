@@ -771,3 +771,19 @@ function makePassword(phrase) {
     })
     .join("");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Remove consecutive duplicate words
+
+function removeConsecutiveDuplicates(string) {
+  let result = "";
+  let stringArr = string.split(" ");
+
+  for (let i = 0; i < stringArr.length; i++) {
+    if (stringArr[i] !== stringArr[i + 1]) {
+      result += stringArr[i] + " ";
+    }
+  }
+
+  return result.trim();
+}

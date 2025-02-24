@@ -787,3 +787,35 @@ function removeConsecutiveDuplicates(string) {
 
   return result.trim();
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Remove consecutive duplicate words
+
+function merryChristmas(s) {
+  function countLetters(text) {
+    const count = {};
+    for (const char of text) {
+      if (/[a-zA-Z]/.test(char)) {
+        count[char] = (count[char] || 0) + 1;
+      }
+    }
+    return count;
+  }
+
+  const strCount = countLetters(s);
+  const wordCount = countLetters("Merry Christmas");
+
+  let minOccurrences = Infinity;
+  for (const char in wordCount) {
+    if (!strCount[char]) {
+      return 0;
+    }
+
+    const occurrences = Math.floor(strCount[char] / wordCount[char]);
+    if (occurrences < minOccurrences) {
+      minOccurrences = occurrences;
+    }
+  }
+
+  return minOccurrences;
+}

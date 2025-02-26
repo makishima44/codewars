@@ -819,3 +819,13 @@ function merryChristmas(s) {
 
   return minOccurrences;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Digits explosion
+
+function explode(s) {
+  return s
+    .split("")
+    .map((el) => (el !== "0" ? el.repeat(Number(el)) : ""))
+    .join("");
+}

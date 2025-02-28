@@ -829,3 +829,16 @@ function explode(s) {
     .map((el) => (el !== "0" ? el.repeat(Number(el)) : ""))
     .join("");
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sum of integers in string
+
+function sumOfIntegersInString(s) {
+  let arrNumber = s.match(/\d+/g) || [];
+
+  if (arrNumber.length) {
+    return arrNumber.map(Number).reduce((sum, el) => sum + el, 0);
+  } else {
+    return 0;
+  }
+}

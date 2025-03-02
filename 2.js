@@ -842,3 +842,36 @@ function sumOfIntegersInString(s) {
     return 0;
   }
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Character with longest consecutive repetition
+
+function longestRepetition(s) {
+  if (s.length <= 0) return ["", 0];
+
+  let maxChar = "";
+  let maxCount = 0;
+  let currentChar = s[0];
+  let currentCount = 1;
+
+  for (let i = 1; i < s.length; i++) {
+    if (s[i] === currentChar) {
+      currentCount++;
+    } else {
+      if (currentCount > maxCount) {
+        maxCount = currentCount;
+        maxChar = currentChar;
+      }
+
+      currentChar = s[i];
+      currentCount = 1;
+    }
+  }
+
+  if (currentCount > maxCount) {
+    maxCount = currentCount;
+    maxChar = currentChar;
+  }
+
+  return [maxChar, maxCount];
+}

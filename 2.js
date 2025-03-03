@@ -875,3 +875,18 @@ function longestRepetition(s) {
 
   return [maxChar, maxCount];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Halving Sum
+
+function halvingSum(n) {
+  let sum = n;
+  let x = n;
+
+  while (x > 1) {
+    x = Math.floor(x / 2);
+    sum += x;
+  }
+
+  return sum;
+}

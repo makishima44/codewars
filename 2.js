@@ -890,3 +890,21 @@ function halvingSum(n) {
 
   return sum;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Minimize Sum Of Array (Array Series #1)
+
+function minSum(arr) {
+  const sortArr = arr.sort((a, b) => a - b);
+  const mid = sortArr.length / 2;
+
+  const minArr = sortArr.slice(0, mid);
+  const maxArr = sortArr.slice(mid).reverse();
+
+  let result = 0;
+  for (let i = 0; i < maxArr.length; i++) {
+    result += minArr[i] * maxArr[i];
+  }
+
+  return result;
+}

@@ -921,3 +921,22 @@ function partlist(arr) {
 
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Palindrome chain length
+
+var palindromeChainLength = function (n) {
+  let steps = 0;
+  let currentNumber = n;
+
+  while (true) {
+    const str = currentNumber.toString();
+    if (str === str.split("").reverse().join("")) {
+      return steps;
+    }
+    const reversedNumber = parseInt(str.split("").reverse().join(""), 10);
+    currentNumber += reversedNumber;
+
+    steps++;
+  }
+};

@@ -940,3 +940,34 @@ var palindromeChainLength = function (n) {
     steps++;
   }
 };
+
+//-----------------------------------------------------------------------------------------------------------//
+// Detect Pangram
+
+function isPangram(string) {
+  const alphabetObject = {};
+
+  for (let i = 0; i < 26; i++) {
+    const letter = String.fromCharCode(97 + i);
+    alphabetObject[letter] = 0;
+  }
+
+  let lettersArr = string
+    .toLowerCase()
+    .replace(/[^a-z]/g, "")
+    .split("");
+
+  for (let i = 0; i < lettersArr.length; i++) {
+    if (alphabetObject.hasOwnProperty(lettersArr[i])) {
+      alphabetObject[lettersArr[i]]++;
+    }
+  }
+
+  for (const letter in alphabetObject) {
+    if (alphabetObject[letter] === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}

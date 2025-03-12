@@ -996,3 +996,13 @@ function incrementer(nums) {
     } else return el + (index + 1);
   });
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Product Of Maximums Of Array (Array Series #2)
+
+function maxProduct(numbers, size) {
+  return numbers
+    .sort((a, b) => b - a)
+    .slice(0, size)
+    .reduce((sum, el) => sum * el);
+}

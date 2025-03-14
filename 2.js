@@ -1006,3 +1006,14 @@ function maxProduct(numbers, size) {
     .slice(0, size)
     .reduce((sum, el) => sum * el);
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// The old switcheroo
+
+function vowel2index(str) {
+  const regex = /[aeiou]/i;
+  return str
+    .split("")
+    .map((el, index) => (regex.test(el) ? index + 1 : el))
+    .join("");
+}

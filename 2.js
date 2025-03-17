@@ -1034,3 +1034,12 @@ function elevatorDistance(array) {
 
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Help Bob count letters and digits.
+
+function countLettersAndDigits(input) {
+  const regex = /[a-zA-Z0-9]/g;
+  const matches = input.match(regex);
+  return matches ? matches.length : 0;
+}

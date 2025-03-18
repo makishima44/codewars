@@ -1043,3 +1043,18 @@ function countLettersAndDigits(input) {
   const matches = input.match(regex);
   return matches ? matches.length : 0;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Evens times last
+
+function evenLast(numbers) {
+  let count = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (i % 2 === 0) {
+      count += numbers[i];
+    }
+  }
+
+  return count ? count * numbers[numbers.length - 1] : 0;
+}

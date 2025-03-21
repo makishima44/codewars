@@ -1108,3 +1108,15 @@ function consecutive(arr, a, b) {
   return false;
 }
 
+//-----------------------------------------------------------------------------------------------------------//
+// Disarium Number (Special Numbers Series #3)
+
+function disariumNumber(n) {
+  let result = 0;
+
+  String(n)
+    .split("")
+    .map((el, index) => (result += Math.pow(el, index + 1)));
+
+  return result === n ? "Disarium !!" : "Not !!";
+}

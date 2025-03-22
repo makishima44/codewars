@@ -1120,3 +1120,18 @@ function disariumNumber(n) {
 
   return result === n ? "Disarium !!" : "Not !!";
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Squares sequence
+
+function squares(x, n) {
+  if (n <= 0) return [];
+  let result = [];
+  let current = x;
+
+  for (let i = 1; i <= n; i++) {
+    result.push(current);
+    current = Math.pow(current, 2);
+  }
+  return result;
+}

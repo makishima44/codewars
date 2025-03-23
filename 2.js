@@ -1135,3 +1135,11 @@ function squares(x, n) {
   }
   return result;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Nth Smallest Element (Array Series #4)
+
+function nthSmallest(arr, pos) {
+  let sortArr = arr.sort((a, b) => a - b);
+  return sortArr[pos - 1];
+}

@@ -1143,3 +1143,11 @@ function nthSmallest(arr, pos) {
   let sortArr = arr.sort((a, b) => a - b);
   return sortArr[pos - 1];
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Automorphic Number (Special Numbers Series #6)
+
+function automorphic(n) {
+  const squareNumStr = String(Math.pow(n, 2));
+  return squareNumStr.endsWith(String(n)) ? "Automorphic" : "Not!!";
+}

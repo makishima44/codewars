@@ -1151,3 +1151,10 @@ function automorphic(n) {
   const squareNumStr = String(Math.pow(n, 2));
   return squareNumStr.endsWith(String(n)) ? "Automorphic" : "Not!!";
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// String Merge!
+
+function stringMerge(string1, string2, letter) {
+  return `${string1.slice(0, string1.indexOf(letter))}${string2.slice(string2.indexOf(letter))}`;
+}

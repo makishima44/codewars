@@ -1158,3 +1158,11 @@ function automorphic(n) {
 function stringMerge(string1, string2, letter) {
   return `${string1.slice(0, string1.indexOf(letter))}${string2.slice(string2.indexOf(letter))}`;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Changing letters
+
+function swap(string) {
+  const vowels = "aeiou";
+  return string.replace(new RegExp(`[${vowels}]`, "g"), (match) => match.toUpperCase());
+}

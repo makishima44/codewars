@@ -1166,3 +1166,16 @@ function swap(string) {
   const vowels = "aeiou";
   return string.replace(new RegExp(`[${vowels}]`, "g"), (match) => match.toUpperCase());
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Complete The Pattern #1
+
+function pattern(n) {
+  if (n < 1) return "";
+  let result = "";
+
+  for (let i = 1; i <= n; i++) {
+    result += `${String(i).repeat(i)}\n`;
+  }
+  return result.trimEnd();
+}

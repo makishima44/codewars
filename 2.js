@@ -1179,3 +1179,14 @@ function pattern(n) {
   }
   return result.trimEnd();
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Sum of Odd Cubed Numbers
+
+function cubeOdd(arr) {
+  const allNumbers = arr.every((el) => typeof el === "number" && !isNaN(el));
+
+  return allNumbers
+    ? arr.reduce((sum, el) => (el % 2 !== 0 ? sum + Math.pow(el, 3) : sum + 0), 0)
+    : undefined;
+}

@@ -1190,3 +1190,13 @@ function cubeOdd(arr) {
     ? arr.reduce((sum, el) => (el % 2 !== 0 ? sum + Math.pow(el, 3) : sum + 0), 0)
     : undefined;
 }
+
+//-----------------------------------------------------------------------------------------------------------//
+// Maximum Triplet Sum (Array Series #7)
+
+function maxTriSum(numbers) {
+  const uniqueNumbers = new Set(numbers);
+  const sortedNumbers = [...uniqueNumbers].sort((a, b) => b - a);
+  sortedNumbers.length = 3;
+  return sortedNumbers.reduce((sum, num) => sum + num, 0);
+}

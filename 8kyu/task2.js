@@ -5,4 +5,4 @@ function uniTotal(string) {
     .reduce((sum, el) => sum + el, 0);
 }
 
-console.log(uniTotal("aaa"));
+

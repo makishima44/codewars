@@ -13,7 +13,3 @@ function secondSymbol(s, symbol) {
 
   return count === 2 ? index : -1;
 }
-
-console.log(
-  secondSymbol("xdihCDljhfNJJuQaKYjnHXwpMcpOuVxALpYBdReWuSgNNijIJxnCTymrgjskBPBhrhaFyuEVeowmcEeREwGhGn ", "L")
-);

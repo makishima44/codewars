@@ -11,4 +11,4 @@ function minimumSteps(numbers, value) {
   }
   return count;
 }
-console.log(minimumSteps([8, 9, 4, 2], 23));
+

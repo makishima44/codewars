@@ -22,7 +22,7 @@ ts/
 
 - **Новый**:  
   - Файл называется по сути задачи: `reverseWords.js` или `sumOfNumbers.ts`.  
-  - В начале файла указывается краткая суть и ссылка на Codewars:  
+  - В начале файла указывается название каты и ссылка на Codewars:  
     ```
     // Task: Reverse the order of words in a string
     // Link: https://www.codewars.com/kata/...

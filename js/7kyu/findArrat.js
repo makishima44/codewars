@@ -1,5 +1,5 @@
-// Task: Simple Fun #124: Lamps
-// Link: https://www.codewars.com/kata/58a3c1f12f949e21b300005c/train/javascript
+// Task: Find array
+// Link: https://www.codewars.com/kata/59a2a3ba5eb5d4e609000055/train/javascript
 
 function findArray(arr1, arr2) {
   if (arr1.length === 0 || arr2.length === 0) return [];

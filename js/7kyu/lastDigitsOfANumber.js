@@ -17,4 +17,4 @@ function lastDigit(n, d) {
   return result;
 }
 
-console.log(lastDigit(1234567, 4));
+

@@ -1,9 +1,7 @@
-// Task: Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
-// Link: https://www.codewars.com/kata/58291fea7ff3f640980000f9/train/javascript
+// Task: Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
+// Link: https://www.codewars.com/kata/582887f7d04efdaae3000090/train/javascript
 
 function findSenior(list) {
   const maxAge = Math.max(...list.map((dev) => dev.age));
   return list.filter((dev) => dev.age === maxAge);
 }
-
-

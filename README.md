@@ -21,8 +21,8 @@ ts/
   - Коммиты содержали только название задачи (например: `"Reverse the order of words in a string"`).  
 
 - **Новый**:  
-  - Файл называется по сути задачи: `reverseWords.js` или `sumOfNumbers.ts`.  
-  - В начале файла указывается название каты и ссылка на Codewars:  
+  - Файл называется по сути задачи или названию задачи: `reverseWords.js` или `sumOfNumbers.ts`.  
+  - В начале файла указывается полное название каты и ссылка на Codewars:  
     ```
     // Task: Reverse the order of words in a string
     // Link: https://www.codewars.com/kata/...

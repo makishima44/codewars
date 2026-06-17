@@ -1,5 +1,5 @@
-// Task: Numbers of Letters of Numbers
-// Link: https://www.codewars.com/kata/599febdc3f64cd21d8000117/train/javascript
+// Task: Organise duplicate numbers in list
+// Link: https://www.codewars.com/kata/5884b6550785f7c58f000047/train/javascript
 
 function group(arr) {
   const map = new Map();
